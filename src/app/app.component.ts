@@ -6,10 +6,14 @@ import { ExploreSectionComponent } from "./components/explore-section/explore-se
 import { AnimationCardComponent } from './components/cards/animation-card/animation-card.component';
 import { DetailsCardComponent } from './components/cards/details-card/details-card.component';
 import { InteractiveCardComponent } from "./components/cards/interactive-card/interactive-card.component";
+import { ResumeCardComponent } from "./components/cards/resume-card/resume-card.component";
+import { CarouselComponent } from "./components/carousel/carousel.component";
+import { PublicationsComponent } from "./components/publications/publications.component";
+import { ImportantPointsComponent } from "./components/important-points/important-points.component";
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, FooterComponent, BannerComponent, ExploreSectionComponent, AnimationCardComponent, DetailsCardComponent, InteractiveCardComponent],
+  imports: [HeaderComponent, FooterComponent, BannerComponent, ExploreSectionComponent, AnimationCardComponent, DetailsCardComponent, InteractiveCardComponent, ResumeCardComponent, CarouselComponent, PublicationsComponent, ImportantPointsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -17,9 +21,11 @@ export class AppComponent {
   pictures = {
     title: "Send, receive, swap.",
     subtitle: "All in one place.",
-    video1: "assets/videos/send.webm",
-    video2: "assets/videos/receive.webm",
-    video3: "assets/videos/swap.webm"
+    videos: [
+      "assets/videos/send.webm",
+      "assets/videos/receive.webm",
+      "assets/videos/swap.webm"
+    ]
   };
 
   details = [
@@ -184,9 +190,32 @@ export class AppComponent {
   picturesTwo = {
     title: "Effortless onboarding.",
     subtitle: "Masterful management.",
-    video1: "assets/videos/onboarding.webm",
-    video2: "assets/videos/mision-control.webm",
-    video3: "assets/videos/drag-drop.webm"
+    videos: [
+      "assets/videos/onboarding.webm",
+      "assets/videos/mision-control.webm",
+      "assets/videos/drag-drop.webm"
+    ]
   };
-  
+
+  pocket = {
+    title: "Always with you.",
+    description: "Pocket is Family's optional self-custody account service. It lets you manage your wallets with just an email/phone and passkey. No more complexity.",
+    icon: true,
+    button: false,
+    image: true,
+    iconSource: "assets/svgs/pocketIcon.svg",
+    multimedia: "assets/svgs/pocketClip.svg"
+  }
+
+  family = {
+    title: "Explore Family",
+    description: "Family is a beautiful self-custody Ethereum wallet designed to make crypto easy for everyone.",
+    icon: false,
+    button: true,
+    image: false,
+    buttonTitle: "Download for iOS",
+    buttonImage: "assets/svgs/downloadIcon.svg",
+    multimedia: "assets/videos/explore-family.webm"
+  }
+
 }

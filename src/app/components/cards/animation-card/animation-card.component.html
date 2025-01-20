@@ -8,15 +8,18 @@
                 </h1>
             </div>
             <div class="card-animation__data__container">
-                <div class="card-animation__data__container__step">
-                    <video autoplay muted loop playsinline [src]="data().video1"></video>
-                </div>
-                <div class="card-animation__data__container__step">
+                @for (item of data().videos; track $index) {
+                    <div class="card-animation__data__container__step">
+                        <video autoplay muted loop playsinline [src]="item"></video>
+                    </div>
+                }
+               
+                <!-- <div class="card-animation__data__container__step">
                     <video autoplay muted loop playsinline [src]="data().video2"></video>
                 </div>
                 <div class="card-animation__data__container__step">
                     <video autoplay muted loop playsinline [src]="data().video3"></video>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
