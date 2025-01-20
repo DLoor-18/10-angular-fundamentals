@@ -1,0 +1,23 @@
+<section>
+    <div class="card-animation">
+        <div class="card-animation__data">
+            <div class="card-animation__data__title">
+                <h1>
+                    <span> {{data().title}} </span>
+                    {{data().subtitle}}
+                </h1>
+            </div>
+            <div class="card-animation__data__container">
+                <div class="card-animation__data__container__step">
+                    <video autoplay muted loop playsinline [src]="data().video1"></video>
+                </div>
+                <div class="card-animation__data__container__step">
+                    <video autoplay muted loop playsinline [src]="data().video2"></video>
+                </div>
+                <div class="card-animation__data__container__step">
+                    <video autoplay muted loop playsinline [src]="data().video3"></video>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
